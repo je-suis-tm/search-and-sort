@@ -145,7 +145,7 @@ def hash(li):
     
     return k
         
-
+#the search part is very similar to the chaining one
 def hashsearch(n,li):
     hashli=hash(li)
     temp=n%11
@@ -153,6 +153,10 @@ def hashsearch(n,li):
     if hashli[temp]==n:
         return True
     else:
+        #when we didnt find the value at hash value
+        #we begin our linear probing
+        #its the same process as the hash function
+        #except we only need to return T/F
         while c<10:
             if hashli[temp]!=n:
                 temp+=1
@@ -171,10 +175,14 @@ def hashsearch(n,li):
 hashsearch(67,[21,55,89,67,12,12])
 
 
-# In[16]:
+# In[16]:True
 
 
 #quadratic probing
+#it looks kickass with the word quadratic
+#actually it is simple AF
+#we just replace the add one method with add quadratic values
+#the difference is that we need an extra variable to store quadratic value
 def hash(li):
     k={0:'',1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:'',10:''}
     temp=[]
@@ -189,11 +197,18 @@ def hash(li):
         pop=temp.pop()
         j=pop%11
         c=0
+        #x is where we store quadratic value
         x=1
         while c<10:
             if k[j]!='':
+                #the loop is basically the same as linear probing
+                #except we add quadratic value
+                #note that its quite difficult 
+                #to determine whether we have been through the entire list
+                #so i still set counter at 0 to 10
                 j+=x**2
                 if j>10:
+                    #note that i use mod eleven %11 when iteration exceeds hash table size
                     j=j%11
             else:
                 k[j]=pop
@@ -211,7 +226,8 @@ def hash(li):
     
     return k
         
-
+#the search is basically the same as linear probing
+#except linear part is substituted with quadratic
 def hashsearch(n,li):
     hashli=hash(li)
     temp=n%11
@@ -238,3 +254,7 @@ def hashsearch(n,li):
 
 hashsearch(67,[21,55,89,67,12,12,12,12,12,12,12,12,12,12,78])
 
+#we get False in the end
+#its quite interesting that for the same hash value 67,12,78
+#we can store 78 in hash table but not 67
+#given the fact that 67 appears first of 78
