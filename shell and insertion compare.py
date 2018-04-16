@@ -106,6 +106,9 @@ def avg(n):
 #theoretically shell sort should be faster
 #but my code for shell sort is definitely o(n^3)
 #undoubtedly shell sort is slower
+#i tried many codes by others
+#they still seem to be slower than insertion
+#so why?
 
 avg(10)
 avg(100)
