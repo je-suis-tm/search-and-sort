@@ -153,50 +153,121 @@ def mergeSort(alist):
     return alist
 
 
+def rad(n):
+    temp=len(str(max(n)))
+
+
+    
+    for i in range(temp):
+        dictionary={'0':[],'1':[],'2':[],'3':[],'4':[],'5':[],'6':[],'7':[],'8':[],'9':[]}
+        for j in range(len(n)):
+            z=n[j]
+            radix=10**i
+            (dictionary[str((z//radix)%10)]).append(z)
+        n=[]
+        
+        for k in range(10):
+            n+=dictionary[str(k)]
+   
+    return n
+
+
 import random as rd
+
 import datetime as dt
+
+
 
 def compare(n): 
 
+
+
     z=[] 
 
+
+
     for i in range(n):
-        r=rd.randint(0,7000) 
+
+        r=rd.randint(0,700000) 
+
         if r not in z:
+
             z.append(r) 
 
+
+
     t1=dt.datetime.now()
+
     (quickSort(z)) 
+
     t2=dt.datetime.now() 
 
+
+
     t3=dt.datetime.now() 
+
     (insertionSort(z)) 
+
     t4=dt.datetime.now() 
+
     
+
     t5=dt.datetime.now() 
+
     (bubbleSort(z)) 
+
     t6=dt.datetime.now()
+
     
+
     t7=dt.datetime.now()
+
     (selectionSort(z)) 
+
     t8=dt.datetime.now()
+
     
+
     t9=dt.datetime.now() 
+
     (shellSort(z)) 
+
     t10=dt.datetime.now()
+
     
+
     t11=dt.datetime.now() 
+
     (mergeSort(z)) 
+
     t12=dt.datetime.now()
+    
+
+    t13=dt.datetime.now()
+    rad(z)
+    t14=dt.datetime.now()
+
 
   
 
+
+
     print(('quick sort:',(t2-t1).microseconds)) 
+
     print(('insertion sort:',(t4-t3).microseconds)) 
+
     print(('bubble sort:',(t6-t5).microseconds)) 
+
     print(('selection sort:',(t8-t7).microseconds)) 
+
     print(('shell sort:',(t10-t9).microseconds))
+
     print(('merge sort:',(t12-t11).microseconds))
+    
+    print(('radix sort:',(t14-t13).microseconds))
+
+
+
 
 
 compare(20000)
