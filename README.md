@@ -22,3 +22,7 @@ sort:
 6.quick sort
 
 7.radix sort
+
+8.counting sort
+
+9.heap sort
