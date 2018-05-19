@@ -1,3 +1,4 @@
+
 # search-and-sort
 search:
 
@@ -27,3 +28,7 @@ sort:
 8.counting sort
 
 9.heap sort
+
+*Note that topological sort is in repo called Graph Theory
+
+https://github.com/tattooday/graph-theory
