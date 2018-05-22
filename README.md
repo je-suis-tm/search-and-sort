@@ -29,6 +29,6 @@ sort:
 
 9.heap sort
 
-*Note that topological sort is in repo called Graph Theory
+*Note that topological sort is in a repo called Graph Theory
 
 https://github.com/tattooday/graph-theory
