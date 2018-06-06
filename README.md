@@ -29,6 +29,6 @@ sort:
 
 9.heap sort
 
-*Note that A* search and topological sort are in a repo called Graph Theory
+*Note that Breath First Search, Depth First Search, A* Search and Topological Sort are in a repo called Graph Theory
 
 https://github.com/tattooday/graph-theory
