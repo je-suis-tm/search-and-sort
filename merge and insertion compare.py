@@ -35,14 +35,17 @@ def mer(list):
     #we wanna make sure the base case is a sublist with two elements
     #otherwise we got nothing to sort
     if len(list)>1:
+        
         #this is how we keep splitting the list into two halves
         ind=len(list)//2
+        
         #we set each half as an individual list
         #then we run the same trick on each half recursively
         left=list[:ind]
         right=list[ind:]
         mer(left)
         mer(right)
+        
         #let me denote i as the index in left list
         #j as the index in right list
         #k as the index in right and left combined list
