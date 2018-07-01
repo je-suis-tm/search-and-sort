@@ -51,15 +51,18 @@ def qui(list):
     #it only works on list with more than two elements
     #otherwise there is no point of getting a pivot number
     if len(list)>2:
+        
         #so we take three elements, first, last and middle
         #we get a new list
         test=[list[0],list[len(list)//2],list[-1]]
+        
         #this is how we get the median
         #there are only 3 elements
         #so the sum of indices is 3
         #all we need to do is to deduct the maximum and the minimum ones indices
         #we get the median one index
         pivotindex=3-test.index(max(test))-test.index(min(test))
+        
         #this part is very confusing
         #mostly due to simultaneous swap
         #its actually just swapping
@@ -79,8 +82,10 @@ def qui(list):
             
         #so we initialize pivot number at position 0
         pivot=list[0]
+        
         #first index is at 1, cuz we wanna exclude pivot number
         f=1
+        
         #last index is at the end of the list
         l=len(list)-1
 
@@ -188,6 +193,7 @@ def compare(n):
 
     for i in range(n):
         r=rd.randint(0,7000) 
+        
         #the only difference from other sorting comparison
         #is that with duplicate value
         #the way we handle pivot number must be altered
