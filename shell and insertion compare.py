@@ -36,6 +36,7 @@ def ins(list):
 #the time complexity is quite difficult to calculate
 
 def shel(list):
+   
    #the first step is to initialize a
    #we will use it to divide the list and do slicing
    #in this case, i use 4
@@ -43,10 +44,12 @@ def shel(list):
     a=4
     b=len(list)//a
     while b>0:
+         
          #instead of rewriting insertion sort
          #i directly use it in shell sort     
         for i in range(b):
             temp=ins(list[i::b])
+            
             #the final loop is actually the slicing of [a::b]
             #[a::b] equals to [a+j*b] j for j in range()
             for j in range(len(temp)):
