@@ -37,22 +37,27 @@ import datetime as dt
 #i use digits from 0-9 as the key of dictionary
 #there are other elegant solutions, plz check the link at the very end
 def rad(n):
+    
     #the first part is to find the largest element in the list
     #next, we find out the length of it
     #so we can use the length in a loop to control how many digits we need to obtain
     temp=len(str(max(n)))
     for i in range(temp):
+        
         #each time, we clear the dictionary
         dictionary={'0':[],'1':[],'2':[],'3':[],'4':[],'5':[],'6':[],'7':[],'8':[],'9':[]}
+        
         #this is traversal on all elements in the list
         for j in range(len(n)):
             z=n[j]
             radix=10**i
+            
             #(z//radix)%10) is the technique to get digits
             #when we get it, we turn it into string
             #so that we can use dictionary slicing
             #to store the element in its rightful place
             (dictionary[str((z//radix)%10)]).append(z)
+            
             #we have to empty the list after we put all elements into the dictionary
         n=[]
         
