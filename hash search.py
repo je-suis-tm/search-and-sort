@@ -39,12 +39,14 @@
 def hash(li):
     k={0:'',1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:'',10:''}
     for i in li:
+        
         #this is to check if there is already a value stored under that hash value
         #if no, its fine
         #if yes, we create a list and append the collision
         if k[i%11]=='':
             k[i%11]=i
         else:
+            
             #note that we append both values into the list
             #the first one is already there
             #thats when we realize there is collision so we gotta keep both
@@ -61,6 +63,7 @@ def hash(li):
 def hashsearch(n,li):
     hashli=hash(li)
     temp=hashli[n%11]
+    
     #we gotta check if there is collision under this hash value
     #if dictionary keeps a list under this hash value
     #we have to check the list
@@ -114,11 +117,13 @@ def hash(li):
     while len(temp)>0:
         pop=temp.pop()
         j=pop%11
+        
         #c is a counter
         #in the second loop
         #c is to determine whether we have gone through the entire list
         c=0
         while c<10:
+            
             #when the next one isnt empty, we keep iterating
             #when j exceeds ten, we return it to 0
             #alternatively we can use mod eleven %11
@@ -128,6 +133,7 @@ def hash(li):
                     j=0
             else:
                 k[j]=pop
+                
                 #after value is assigned
                 #we clear the value
                 pop=''
@@ -139,6 +145,7 @@ def hash(li):
         if pop!='':
             badhash.append(pop)
             pop=''
+    
     #if the hashing is imperfect, we print out badhash list
     if len(badhash)>0:
         print(badhash)       
@@ -153,6 +160,7 @@ def hashsearch(n,li):
     if hashli[temp]==n:
         return True
     else:
+        
         #when we didnt find the value at hash value
         #we begin our linear probing
         #its the same process as the hash function
@@ -197,10 +205,12 @@ def hash(li):
         pop=temp.pop()
         j=pop%11
         c=0
+        
         #x is where we store quadratic value
         x=1
         while c<10:
             if k[j]!='':
+                
                 #the loop is basically the same as linear probing
                 #except we add quadratic value
                 #note that its quite difficult 
@@ -208,6 +218,7 @@ def hash(li):
                 #so i still set counter at 0 to 10
                 j+=x**2
                 if j>10:
+                    
                     #note that i use mod eleven %11 when iteration exceeds hash table size
                     j=j%11
             else:
