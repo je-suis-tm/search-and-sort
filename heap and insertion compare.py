@@ -25,9 +25,11 @@ Created on Thu May  3 15:44:55 2018
 #otherwise we would have to use loops in loops
 
 def heap(n):
+    
     #denote i as the height of the tree
     i=0
     maxlen=len(n)
+    
     #when we are left with one element
     #that is the base case for recursion
     if maxlen<2:
@@ -43,11 +45,13 @@ def heap(n):
     #we have to use i+1 to make sure each height has been traveled
     #until we reach the base case, height 0, the root
     for j in range(i+1,-1,-1):
+        
         #the special character of binary heap is that 
         #right child is alway even number index
         #and left child, vice versa
             right=j*2+2
             left=j*2+1
+            
             #we have to use try in case the node is the leaf
             #and if there is no left child
             #there wont be right child
