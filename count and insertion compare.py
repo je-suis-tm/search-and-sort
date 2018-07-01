@@ -20,6 +20,7 @@ Created on Thu May  3 15:42:57 2018
 #simplest sort among all
 
 def counts(n):
+    
     #first we get the maximum value
     #if maximum value is larger than the length of the list
     #we would create a list with a huge space complexity
