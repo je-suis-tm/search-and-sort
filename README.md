@@ -1,5 +1,6 @@
 
-# search-and-sort
+# Search and Sort Algorithm Implementation
+
 search:
 
 1.sequential search
