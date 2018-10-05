@@ -1,7 +1,10 @@
-
 # Search and Sort Algorithm Implementation
 
-search:
+This is a repo for Python algorithm learning. There will be no more updates for this repo. Hopefully it can help you along your way towards mastering Python algorithms. Please refer to the following link for the details of search and sort algortihm in Python.
+
+http://interactivepython.org/runestone/static/pythonds/index.html
+
+<b>Search</b><br>
 
 1.sequential search
 
@@ -10,7 +13,7 @@ search:
 3.hash search
 
 
-sort:
+<b>Sort</b><br>
 
 1.bubble sort
 
