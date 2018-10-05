@@ -4,7 +4,7 @@ This is a repo for Python algorithm learning. There will be no more updates for 
 
 http://interactivepython.org/runestone/static/pythonds/index.html
 
-<b>Search</b><br>
+# Search
 
 1.sequential search
 
@@ -13,7 +13,7 @@ http://interactivepython.org/runestone/static/pythonds/index.html
 3.hash search
 
 
-<b>Sort</b><br>
+# Sort
 
 1.bubble sort
 
