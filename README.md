@@ -6,32 +6,32 @@ http://interactivepython.org/runestone/static/pythonds/index.html
 
 # Search
 
-1.sequential search
+1.Sequential Search
 
-2.binary search
+2.Binary Search
 
-3.hash search
+3.Hash Search
 
 
 # Sort
 
-1.bubble sort
+1.Bubble Sort
 
-2.selection sort
+2.Selection Sort
 
-3.insertion sort
+3.Insertion Sort
 
-4.shell sort
+4.Shell Sort
 
-5.merge sort
+5.Merge Sort
 
-6.quick sort
+6.Quick Sort
 
-7.radix sort
+7.Radix Sort
 
-8.counting sort
+8.Counting Sort
 
-9.heap sort
+9.Heap Sort
 
 *Note that Graph ADT search and sort including Breath First Search, Depth First Search, A_Star Search and Topological Sort are in a repo called Graph Theory*
 
