@@ -35,4 +35,4 @@ http://interactivepython.org/runestone/static/pythonds/index.html
 
 *Note that Graph ADT search and sort including Breath First Search, Depth First Search, A_Star Search and Topological Sort are in a repo called Graph Theory*
 
-https://github.com/tattooday/graph-theory
+https://github.com/je-suis-tm/graph-theory
