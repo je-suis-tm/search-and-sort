@@ -99,7 +99,7 @@ def mer(list):
         
 #insertion basically is my benchmark now
 #details can be found here
-#https://github.com/tattooday/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.py
+#https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.py
 def ins(list): 
     for i in range(1,len(list)): 
             
