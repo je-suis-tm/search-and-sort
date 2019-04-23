@@ -33,6 +33,14 @@ http://interactivepython.org/runestone/static/pythonds/index.html
 
 9.Heap Sort
 
+10.Bogo Sort
+
+11.Gnome Sort
+
+12.Bitonic Sort
+
+13.Cocktail Shaker Sort
+
 *Note that Graph ADT search and sort including Breath First Search, Depth First Search, A_Star Search and Topological Sort are in a repo called Graph Theory*
 
 https://github.com/je-suis-tm/graph-theory
