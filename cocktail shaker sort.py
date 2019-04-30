@@ -9,7 +9,16 @@ import random as rd
 
 # In[2]:
 
-
+#cocktail shaker sort is a variation of bubble sort
+#bubble sort repeatedly takes comparison from one side to the other
+#usually left to right, takes n*(n-1) steps, assuming n is the size
+#cocktail shaker sort has a similar mechanism
+#except it compares its elements from left to right
+#then right to left, then left to right
+#the process looks like a cocktail shaker (not really)
+#that is how the sort gets its name
+#in theory, for a partially sorted list
+#cocktail shaker sort takes less time than a bubble sort
 def cocktail_shaker_sort(target):
 
     left=0
