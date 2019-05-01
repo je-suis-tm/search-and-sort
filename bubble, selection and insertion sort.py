@@ -11,7 +11,7 @@ import random as rd
 #the time complexity can go to n*(n-1)
 #basically we create iterations to compare each element
 #for the first round, we try to compare item i with the item right next to it
-#we swap the place of two items if the the item next to item i is smaller
+#we swap the place of two items if the item next to item i is smaller
 #we keep applying this rule to the list during the traversal
 #in the end, we must have placed the largest item at the end of list
 #for the next iteration, we do the same trick
@@ -23,7 +23,7 @@ def bubble_sort(target):
     
     #for each round n, we find the nth largest number
     #so we apply descending order on range function
-    #remember that range function always include the first variable and ignore the last
+    #remember that range function always includes the first variable and ignore the last
     #we use len(target) instead of len(target)-1
     for i in range(len(target),0,-1):
         
@@ -50,7 +50,7 @@ for i in range(100):
         
 #selection
 #selection sort is a simplified version of bubble sort
-#selection sort try to find the nth largest number for each round n
+#selection sort tries to find the nth largest number for each round n
 #the next round is n-1, the same as bubble sort
 #however, we only do traversal for each round
 #we dont make any swap at all
@@ -74,7 +74,7 @@ def selection_sort(target):
         index=0
         
         #note that im using i+1
-        #remember that range function always include the first variable and ignore the last
+        #remember that range function always includes the first variable and ignore the last
         #i wanna make sure i cover the whole target list
         #as this is in ascending order, i dont need to worry about 0 or 1
         for j in range(i+1):
