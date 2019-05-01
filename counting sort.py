@@ -9,6 +9,7 @@ Created on Thu May  3 15:42:57 2018
 
 # In[1]:
 
+import random as rd
 
 #counting sort is kinda different from other sorts in this repo
 #it works the best when there is large quantity of duplicates
@@ -61,7 +62,9 @@ def counting_sort(target):
 
 for i in range(100):
     
-    target=rd.sample([i for i in range(1000)],100)
-
+    #usually we use rd.sample to form a non-duplicate list
+    #for counting sort, we need massive amount of duplicates
+    target=[rd.randint(0,20) for i in range(100)]
+    
     if counting_sort(target)!=sorted(target):
         print('Erreur')
