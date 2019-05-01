@@ -1,10 +1,13 @@
 # Search and Sort Algorithm Implementation
 
-This is a repo for Python algorithm learning. There will be no more updates for this repo. Hopefully it can help you along your way towards mastering Python algorithms. Please refer to the following link for the details of search and sort algortihm in Python.
+This is a repository for algorithm learning. Hopefully it can help you along your way towards mastering algorithms. Please refer to <a href=http://interactivepython.org/runestone/static/pythonds/index.html>interactivepython</a> for the details of search and sort algorithm in Python.
 
-http://interactivepython.org/runestone/static/pythonds/index.html
+*Note that search and sort algorithms in Graph ADT, including Breath First Search, Depth First Search, A_Star Search and Topological Sort, are in a repository called <a href=https://github.com/je-suis-tm/graph-theory>Graph Theory</a>*
 
-# Search
+*Like the rest of the repositories, this repository is under renovation as well.*
+
+
+### Search
 
 1.Sequential Search
 
@@ -13,7 +16,7 @@ http://interactivepython.org/runestone/static/pythonds/index.html
 3.Hash Search
 
 
-# Sort
+### Sort
 
 1.Bubble Sort
 
@@ -39,8 +42,4 @@ http://interactivepython.org/runestone/static/pythonds/index.html
 
 12.Bitonic Sort
 
-13.Cocktail Shaker Sort
-
-*Note that Graph ADT search and sort including Breath First Search, Depth First Search, A_Star Search and Topological Sort are in a repo called Graph Theory*
-
-https://github.com/je-suis-tm/graph-theory
+13.Shaker Sort
