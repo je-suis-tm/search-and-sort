@@ -9,7 +9,9 @@ import random as rd
 
 # In[2]:
 
-#cocktail shaker sort is a variation of bubble sort
+#shaker sort, or cocktail sort, or cocktail shaker sort
+#in this script, we will call it cocktail shaker sort
+#with so many names, it is merely a variation of bubble sort
 #go the link below to check out the details of bubble sort
 # https://github.com/je-suis-tm/search-and-sort/blob/master/bubble,%20selection%20and%20insertion%20sort.py
 #bubble sort repeatedly takes comparison from one side to the other
