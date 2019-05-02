@@ -1,81 +1,86 @@
 
 # coding: utf-8
 
-# In[4]:
+# In[1]:
 
 
 
 #sequential search is the easiest
-#basically it is just doing a traversal on all items
-def f(n,list):
+#basically it is doing a traversal on all items
+def sequential_search(target,raw_list):
+    
     i=0
     
-    #we create a boolen value to control the loop
+    #we create a boolean value to control the loop
     #when we find the value in list
-    #we reset found so we break the loop
-    #in the end the output is found
+    #we reset found and break the loop
     found=False
     
     #note that while function does one extra iteration
-    #so it is i<len(list) instead of i<=len(list)
-    while i<len(list) and not found:
-        if list[i]==n:
+    #so it is i<len(raw_list) instead of i<=len(raw_list)
+    while i<len(raw_list) and not found:
+        if raw_list[i]==target:
             found=True
         i+=1
     return found
         
 
 
-# In[6]:
+# In[2]:
 
 
-f(1,[4,5,1])
+sequential_search(1,[4,5,1])
 
 
-# In[11]:
+# In[3]:
 
 
-#binary search is a bit more efficient
-#the trouble is that it only works on sorted list
-#when the list is large, sorting could take more time than doing a traversal
-#sequential search could be more efficient
-def bina(n,list):
-    f=0
+#binary search is a lil more efficient in a way
+#the trouble is that it only works on a sorted list
+#when the list is large, sorting could take more time than traversal
+#sequential search may be a better choice
+def binary_search(target,raw_list):
+    
+    left=0
     
     #for binary search
     #we create the first and the last index
     #binary search starts from the middle
     #if the middle value is larger, we search the lower half, vice versa
-    #we do the same trick on the lower half recursively the accurate number
-    #note that l=len(list)+1 to get
-    l=len(list)+1
-    list=sorted(list)
+    #we do the same trick on the lower half recursively
+    #note that right=len(list)+1 can handle both odd and even number case
+    right=len(list)+1
+    sorted_list=sorted(raw_list)
     found=False
-    while f<=l and not found:
+    
+    while left<=right and not found:
         
         #to get the middle point of any length
         #we need to get the half of the sum of first and last index
-        #so we use (f+l)//2 to get thhe middle value for any length
-        i=(f+l)//2
-        if list[i]==n:
+        #we use (left+right)//2 to get the middle value for any length
+        #right=len(list)+1 can handle the odd number case
+        i=(left+right)//2
+        
+        if sorted_list[i]==target:
             found=True
             
             #if the middle value is larger than the target
             #we search the lower half
-            #we set l=i-1
+            #we set right=i-1
             #cuz item i has already been checked
             #we just need the upper limit to get the middle next value
-        elif list[i]>n:
-            l=i-1
+        elif sorted_list[i]>target:
+            right=i-1
         else:
             
             #vice versa
-            f=i+1
+            left=i+1
+            
     return found
 
 
-# In[13]:
+# In[4]:
 
 
-bina(1,[4,5,7,9,24])
+binary_search(1,[4,5,7,9,24])
 
