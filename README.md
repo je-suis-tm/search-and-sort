@@ -4,9 +4,6 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 *Note that search and sort algorithms in Graph ADT, including Breath First Search, Depth First Search, A_Star Search and Topological Sort, are in a repository called <a href=https://github.com/je-suis-tm/graph-theory>Graph Theory</a>*
 
-*Like the rest of the repositories, this repository is under renovation as well.*
-
-
 ### Search
 
 <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/sequential%20and%20binary%20search.py>1.Sequential Search</a>
