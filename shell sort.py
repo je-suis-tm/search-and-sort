@@ -55,8 +55,7 @@ def shell_sort(target):
         for i in range(b):
             temp=insertion_sort(target[i::b])
             
-            #the final loop is actually the slicing of [a::b]
-            #[a::b] equals to [a+j*b] j for j in range(len(temp))
+            #put the sorted sublist back to a bigger list
             for j in range(len(temp)):
                 target[i+j*b]=temp[j]
         
