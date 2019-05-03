@@ -8,234 +8,163 @@ Created on Tue Apr 17 15:32:34 2018
 #okay. the epic one!
 #quick sort, mmm, not so quick
 #the idea of quick sort is be the quickest
-#firstly, we have to choose a pivot number for the list
+#first thing first, we gotta pick a pivot number for the list
 #normally, people use the first element as pivot number
 #however, we may encounter a case that the first element is the largest or the smallest
 #that would make our sorting a total failure
-#so i use the median of 3 approach
-#i take the first, the last and the one in the middle
-#and i get the median of the three
-#i use it as a pivot number
+#here i use the median of 3 approach
+#take the first, the last and the one in the middle
+#and get the median of the three
+#we use the median as a pivot number
 #after that, we do the same trick as merge sort
-#we have a first index and a last index
+#we have a left index and a right index
 #we do traversal on both indices
-#say the first index comes from left part, the last comes from the right
+#say the left index comes from the left part
+#the right index comes from the right paart
 #we compare two elements with pivot number at the same time
 #there are four cases assuming that we dont have any duplicate values in the list
-#first, left is larger than pivot, right is smaller than pivot
+#first case, left is larger than pivot, right is smaller than pivot
 #so we swap both
-#second,left is larger than pivot, right is larger than pivot
-#so we freeze the left, and move right index last one step back
-#so its actually l=l-1
+#second case, left is larger than pivot, right is larger than pivot as well
+#we freeze the left, and move right side index one step backwards
+#right=right-1
 #then if left is larger than pivot, right is smaller than pivot
 #we back to the first case
-#if it is still the same, we keep doing this procedure until we move to first case
-#or f and l indices cross, we stop the sorting
-#third, left is smaller than pivot, right is smaller than pivot
-#it is the opposite case of second case, so vice versa
-#fourth, left is smaller than pivot, right is larger than pivot
+#if it is still the second case, we repeat this procedure until we move to first case
+#or left and right indices cross, we stop the sorting
+#third case, left is smaller than pivot, right is smaller than pivot
+#it is the opposite case of the second case
+#fourth case, left is smaller than pivot, right is larger than pivot
 #great, we do nothing but moving both indices closer to the centre
-#so these are four basic scenarios when we do both traversals
-#when f and l indices cross, we stop the sorting
+#these are four basic scenarios when we do both traversals
+#when left and right indices cross, we stop the sorting
 #and we insert the pivot number in where indices cross
 #the next step is just like merge sort
-#so we divide the list in two halves (excluding the pivot number)
+#we divide the list in two halves (excluding the pivot number)
 #we perform the same trick on both halves recursively
-#until we reach the base case that there are only two elements in the list
+#until we reach the base case when there are only two elements in the list
 #we sort those two elements with simple comparison
+def quick_sort(target):
 
-def qui(list):
 
-
-    #so the first step is to get a pivot number
+    #the first step is to get a pivot number
     #it only works on list with more than two elements
     #otherwise there is no point of getting a pivot number
-    if len(list)>2:
+    if len(target)>2:
         
-        #so we take three elements, first, last and middle
+        #we take three elements, first, last and middle
         #we get a new list
-        test=[list[0],list[len(list)//2],list[-1]]
+        test=[target[0],target[len(target)//2],target[-1]]
         
         #this is how we get the median
         #there are only 3 elements
         #so the sum of indices is 3
-        #all we need to do is to deduct the maximum and the minimum ones indices
-        #we get the median one index
+        #0+1+2
+        #all we need to do is to exclude the maximum and the minimum indices
+        #we get the median s index
         pivotindex=3-test.index(max(test))-test.index(min(test))
         
         #this part is very confusing
         #mostly due to simultaneous swap
-        #its actually just swapping
+        #it is merely swapping
         #if the median number index is 0
         #we do nothing
         #cuz we initialize pivot number at index 0 later
         #if not
-        #we do a swap
-        #so we use slicing method to get the median number index in original list
-        #we use that index we got to get the actual element
+        #we make a swap
+        #we use slicing method to get the index of the median in original list
+        #we use that index to get the actual element
         #then we swap it with element 0
         if pivotindex!=0:
-            list[list.index(test[pivotindex])] , list[0] = list[0] , list[list.index(test[pivotindex])]
+            target[target.index(test[pivotindex])] , target[0] = target[0] , target[target.index(test[pivotindex])]
 
             
-
-            
-        #so we initialize pivot number at position 0
-        pivot=list[0]
+        #with the previous swap, we initialize pivot number at position 0
+        pivot=target[0]
         
         #first index is at 1, cuz we wanna exclude pivot number
-        f=1
+        left=1
         
         #last index is at the end of the list
-        l=len(list)-1
+        right=len(target)-1
 
 
-
-
-#here comes the real deal
-#when f and l doesnt cross
-#excluding a case when they equal to each other
-#note that unlike f is from the beginning 
-#l is from the end, so its l-=1
-        while f-1<l:
+        #here comes the real deal
+        #when left and right dont cross
+        #excluding a case when two indices equal to each other
+        while left-1<right:
 
             #case 1
-            if list[f]>pivot and list[l]<pivot:
-                list[f],list[l]=list[l],list[f]
+            if target[left]>pivot and target[right]<pivot:
+                target[left],target[right]=target[right],target[left]
                 l-=1
                 
             #case 3
-            if list[f]<pivot and list[l]<pivot:
-                f+=1
+            if target[left]<pivot and target[right]<pivot:
+                left+=1
 
             #case 2
-            if list[f]>pivot and list[l]>pivot:
-                l-=1
+            if target[left]>pivot and target[right]>pivot:
+                right-=1
 
             #case 4
-            if list[f]<pivot and list[l]>pivot:
-                f+=1
-                l-=1
+            if target[left]<pivot and target[right]>pivot:
+                left+=1
+                right-=1            
 
             
-
-            
-#this is when they cross
-#we pop the pivot number and insert it at position f-1
-#the key is that indices cross, its already one step after the list is sorted
-#therefore, we insert pivot at f-1 instead of f
-        if f>=l:
-            list.insert(f-1,list.pop(0))
+        #when left and right indices cross
+        #we pop the pivot number and insert it at position left-1
+        #when indices cross, we are one step after the input list is sorted
+        #therefore, we insert pivot at left-1 instead of left
+        if left>=right:
+            target.insert(left-1,target.pop(0))
 
         
-#this is the recursive part
-#we do the same trick on two halves
-        list[:f-1]=qui(list[:f-1])
-        list[f:]=qui(list[f:])
+        #the recursive part
+        #we do the same trick on two halves
+        target[:left-1]=quick_sort(target[:left-1])
+        target[left:]=quick_sort(target[left:])
         
 
     
-#this is the base case
-#when we left with two elements in a sublist
-#we just compare and return in reverse order
-#u might ask, what about one element
-#well, we dont have to do anything so no codes needed
-    if len(list)==2:
-        if list[0]>list[1]:
-            return list[::-1]
+    #the base case
+    #when we are left with two elements in a sublist
+    #we just compare and return in reverse order
+    #u might ask, what about one element
+    #well, we dont have to do anything so no codes needed
+    if len(target)==2:
+        if target[0]>target[1]:
+            return target[::-1]
         
  
 
-    return list
+    return target
 
 
-
-
-
-#insertion basically is my benchmark now
-#details can be found here
-#https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.py
-def ins(list): 
-
-    for i in range(1,len(list)): 
-
-            
-
-           val=list[i] 
-
-            
-
-           j=i 
-
-           while val<list[j-1] and j!=0: 
-
-                
-
-                   list[j]=list[j-1] 
-
-                   j-=1 
-
-            
-
-           list[j]=val 
-
-    return list 
-
-
-
-import datetime as dt 
-import random as rd 
-
-#its time to compare two sorting methods
-def compare(n): 
-
-    z=[] 
-
-    for i in range(n):
-        r=rd.randint(0,7000) 
         
-        #the only difference from other sorting comparison
-        #is that with duplicate value
-        #the way we handle pivot number must be altered
-        #for simplicity, i remove duplicates from our test list
-        
-        #to handle duplicate values which might affect pivot
-        #my idea is to insert an extra if function
-        #if elements not at position 0 equal to pivot
-        #we create a new list to collect them
-        #when we plan to insert pivot
-        #we insert as many as was in the list
-        if r not in z:
-            z.append(r) 
+#there is a constraint for quick sort
+#duplicate values would jeopardize everything we have built
+#to solve that issue, we must amend the criteria for selecting pivot number
+#for simplicity, i remove duplicates from our test list
+#to handle duplicate values which might affect pivot
+#my idea is to insert an extra if function
+#if elements not at position 0 equal to pivot
+#we create a temporary list to collect them
+#when we plan to insert pivot
+#we insert the temporary list to the full list 
 
-    
-
-    t1=dt.datetime.now() 
-    test1=(qui(z)) 
-    t2=dt.datetime.now() 
-
-  
-    t3=dt.datetime.now() 
-    test2=(ins(z)) 
-    t4=dt.datetime.now() 
-
-  
-
-    print(((t2-t1).microseconds)) 
-    print(((t4-t3).microseconds)) 
-    print('quick sort:',test1==sorted(z))
-    print('insertion sort:',test2==sorted(z))
-
-
-compare(100000)
-
-#as i have predicted
-#its slower than insertion sort
-#cuz we have recursive functions
-#my approach to get a quick sort
+#since we have recursive functions
+#this approach to get a quick sort
 #is kinda different from my textbook
-#to see the alternative
-#go to
-#http://interactivepython.org/runestone/static/pythonds/SortSearch/TheQuickSort.html
+#to see the alternative version
+#plz click the link below
+# http://interactivepython.org/runestone/static/pythonds/SortSearch/TheQuickSort.html
 
 
+for i in range(100):
+    
+    target=rd.sample([i for i in range(1000)],100)
+
+    if quick_sort(target)!=sorted(target):
+        print('Erreur')
