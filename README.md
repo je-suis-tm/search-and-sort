@@ -37,6 +37,6 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/gnome%20sort.py>11.Gnome Sort</a>
 
-12.Bitonic Sort
+<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bitonic%20sort.py>12.Bitonic Sort</a>
 
 <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/shaker%20sort.py>13.Shaker Sort</a>
