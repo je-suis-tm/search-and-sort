@@ -2,7 +2,7 @@
 
 This is a repository for algorithm learning. Hopefully it can help you along your way towards mastering algorithms. Please refer to <a href=http://interactivepython.org/runestone/static/pythonds/index.html>interactivepython</a> for the details of search and sort algorithm in Python.
 
-*Note that search and sort algorithms in Graph ADT, including Breath First Search, Depth First Search, A_Star Search and Topological Sort, are in a repository called <a href=https://github.com/je-suis-tm/graph-theory>Graph Theory</a>*
+*Note that search and sort algorithms in Graph ADT, including Breath First Search, Depth First Search, A_Star Search and Topological Sort, are in a repository called <a href=https://github.com/je-suis-tm/graph-theory>Graph Theory</a>.*
 
 ### Search
 
