@@ -24,25 +24,35 @@ def bitonic_sort(target):
     
     if len(target)==1:
         return target
-
+    
     i=1
+    
+    #primary iteration
     while 2**(i-1)<len(target)/2+1:
     
         j=2**i
     
         direction=get_direction(j,len(target))
-    
-        while j>=2:
         
+        #secondary iteration
+        while j>=2:
+            
+            #double loop helps us to find out who is comparing with who for each round
+            #the sorting order is given by another function called get_direction
             for k in range(0,len(target),j):            
                 for l in range(k,k+int(j/2)):
+                    
                     if target[l]>target[l+int(j/2)] and \
                     direction[l]==1:
                         target[l],target[l+int(j/2)]=target[l+int(j/2)],target[l]
+                        
                     if target[l]<target[l+int(j/2)] and \
                     direction[l]==-1:
                         target[l],target[l+int(j/2)]=target[l+int(j/2)],target[l]
             
+            #int is important
+            #list indices dont support float
+            #when u do /, we get float by default
             j=int(j/2)
      
         i+=1
@@ -50,7 +60,12 @@ def bitonic_sort(target):
     return target
     
     
-
+#the annoying part of bitonic sort is that
+#some parts of the sequence are sorted by descending order
+#other parts of the sequence are sorted by ascending order
+#for each primary iteration, we create a sorting order sequence for each element
+#for each secondary iteration inside a primary iteration
+#the sorting order for each element is the same
 def get_direction(iteration_number,length):
     
     temp=iteration_number
