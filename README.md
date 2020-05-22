@@ -15,28 +15,28 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 ### Sort
 
-1. Bubble Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.py>Python</a>)
+1. Bubble Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.py>Python</a>)
 
-2. Selection Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.py>Python</a>)
+2. Selection Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.py>Python</a>)
 
-3. Insertion Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.py>Python</a>)
+3. Insertion Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.py>Python</a>)
 
-4. Shell Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/shell%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/shell%20sort.py>Python</a>)
+4. Shell Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/shell%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/shell%20sort.py>Python</a>)
 
-5. Merge Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/merge%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/merge%20sort.py>Python</a>)
+5. Merge Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/merge%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/merge%20sort.py>Python</a>)
 
-6. Quick Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/quick%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/quick%20sort.py>Python</a>)
+6. Quick Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/quick%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/quick%20sort.py>Python</a>)
 
-7. Radix Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/radix%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/radix%20sort.py>Python</a>)
+7. Radix Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/radix%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/radix%20sort.py>Python</a>)
 
-8. Counting Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/counting%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/counting%20sort.py>Python</a>)
+8. Counting Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/counting%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/counting%20sort.py>Python</a>)
 
-9. Heap Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/heap%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/heap%20sort.py>Python</a>)
+9. Heap Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/heap%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/heap%20sort.py>Python</a>)
 
-10. Bogo Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bogo%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bogo%20sort.py>Python</a>)
+10. Bogo Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bogo%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bogo%20sort.py>Python</a>)
 
-11. Gnome Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/gnome%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/gnome%20sort.py>Python</a>)
+11. Gnome Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/gnome%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/gnome%20sort.py>Python</a>)
 
-12. Bitonic Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bitonic%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bitonic%20sort.py>Python</a>)
+12. Bitonic Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bitonic%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bitonic%20sort.py>Python</a>)
 
-13. Shaker Sort(<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/shaker%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/shaker%20sort.py>Python</a>)
+13. Shaker Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/shaker%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/shaker%20sort.py>Python</a>)
