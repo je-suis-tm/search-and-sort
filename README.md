@@ -10,7 +10,7 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 2. Binary Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/sequential%20and%20binary%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/sequential%20and%20binary%20search.py>Python</a>)
 
-3.Hash Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/hash%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/hash%20search.py>Python</a>)
+3. Hash Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/hash%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/hash%20search.py>Python</a>)
 
 
 ### Sort
