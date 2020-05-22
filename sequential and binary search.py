@@ -9,20 +9,10 @@
 #basically it is doing a traversal on all items
 def sequential_search(target,raw_list):
     
-    i=0
-    
-    #we create a boolean value to control the loop
-    #when we find the value in list
-    #we reset found and break the loop
-    found=False
-    
-    #note that while function does one extra iteration
-    #so it is i<len(raw_list) instead of i<=len(raw_list)
-    while i<len(raw_list) and not found:
-        if raw_list[i]==target:
-            found=True
-        i+=1
-    return found
+    for i in raw_list:
+        if i==target:
+            return True
+    return False
         
 
 
