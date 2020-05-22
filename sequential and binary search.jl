@@ -1,4 +1,7 @@
+# In[1]:
 arr=[12,56,32,86,23,87]
+
+# In[2]:
 
 #sequential search is the easiest
 #basically it is doing a traversal on all items
@@ -11,7 +14,11 @@ function sequential_search(target,arr)
     return false
 end
 
+# In[3]:
+
 sequential_search(23,arr)
+
+# In[4]:
 
 #binary search is a lil more efficient in a way
 #the trouble is that it only works on a sorted list
@@ -66,6 +73,8 @@ function binary_search(target,arr)
     return false
     
 end
+
+# In[5]:
 
 binary_search(22,arr)
 
