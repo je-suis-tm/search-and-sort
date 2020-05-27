@@ -36,7 +36,7 @@
 
 #the first function is to create a dictionary
 #assign values from the list to the dictionary based on hash value
-def hash(raw_list):
+def genr_hash(raw_list):
     
     hashtable={0:'',1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:'',10:''}
     
@@ -62,8 +62,8 @@ def hash(raw_list):
 #we just apply hash function on target and get hash value
 #we look up the hash value in dictionary
 def hashsearch(target,raw_list):
-    hashtable=hash(raw_list)
-    temp=hashtable[n%11]
+    hashtable=genr_hash(raw_list)
+    temp=hashtable[target%11]
     
     #we gotta check if there is collision under this hash value
     #if dictionary keeps a list under this hash value
@@ -84,7 +84,7 @@ def hashsearch(target,raw_list):
 # In[2]:
 
 
-hashsearch(55,[21,55,89,67])
+print(hashsearch(55,[21,55,89,67]))
 
 
 # In[3]:
@@ -101,7 +101,7 @@ hashsearch(55,[21,55,89,67])
 #in the worst case, it is slower
 
 #note that i create a temporary list to append collision items
-def hash(raw_list):
+def genr_hash(raw_list):
     
     hashtable={0:'',1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:'',10:''}
     temp=[]
@@ -137,6 +137,7 @@ def hash(raw_list):
                 #after the value is assigned
                 #we clear the value
                 pop=''
+                c=10
                 
             c+=1
         
@@ -155,7 +156,7 @@ def hash(raw_list):
 #the search part is very similar to the chaining one
 def hashsearch(target,raw_list):
     
-    hashtable=hash(raw_list)
+    hashtable=genr_hash(raw_list)
     temp=target%11
     c=0
     
@@ -182,7 +183,7 @@ def hashsearch(target,raw_list):
 # In[4]:
 
 
-hashsearch(67,[21,55,89,67,12,12])
+print(hashsearch(67,[21,55,89,67,12,12]))
 
 
 # In[5]:
@@ -192,7 +193,7 @@ hashsearch(67,[21,55,89,67,12,12])
 #as a matter of fact, it is simple AF
 #we just replace the add one method with add quadratic values
 #the difference is that we need an extra variable to store quadratic value
-def hash(raw_list):
+def genr_hash(raw_list):
     
     hashtable={0:'',1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',9:'',10:''}
     temp=[]
@@ -228,6 +229,7 @@ def hash(raw_list):
             else:
                 hashtable[j]=pop
                 pop=''
+                c=10
             c+=1
             x+=1
         
@@ -246,7 +248,7 @@ def hash(raw_list):
 #except linear part is substituted with quadratic
 def hashsearch(target,raw_list):
     
-    hashtable=hash(raw_list)
+    hashtable=genr_hash(raw_list)
     temp=target%11
     c=0
     x=1
@@ -269,9 +271,13 @@ def hashsearch(target,raw_list):
 
 # In[6]:
 
-hashsearch(67,[21,55,89,67,12,12,12,12,12,12,12,12,12,12,78])
+print(hashsearch(67,[21,55,89,67,12,12,12,12,12,12,12,12,12,12,78]))
 
 #we get False in the end
 #its quite interesting that for the same hash value 67,12,78
 #we can store 78 in hash table but not 67
-#given the fact that 67 appears first of 78
+#because we use pop function
+#the list is processed in a reversed order
+#78 and 12 are processed earlier than 67
+#quadratic probing doesnt iterate through all slots
+#all empty slots we can iterate have been occupied by the time we reach 67
