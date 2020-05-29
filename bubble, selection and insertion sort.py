@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Apr 12 10:13:45 2018
 
-"""
+#Created on Thu Apr 12 10:13:45 2018
+
 
 import random as rd
 
@@ -85,8 +84,8 @@ def selection_sort(target):
                 maxval=target[j]
                 index=j
                 
-                #once we find out the ith largest number
-                #we swap it with the item at the end of unsorted list
+        #once we find out the ith largest number
+        #we swap it with the item at the end of unsorted list
         target[index],target[i]=target[i],target[index]
         
     return target
@@ -138,8 +137,8 @@ def insertion_sort(target):
         #j!=0 is to make sure the iteration doesnt go outta the length of the target
         while val<target[j-1] and j!=0:
             
-            #we dont swap
-            #we simply shift it backwards
+                #we dont swap
+                #we simply shift it backwards
                 target[j]=target[j-1]
                 j-=1
         
