@@ -42,7 +42,7 @@ def shell_sort(target):
    
     #the first step is to initialize a
     #we will use this variable to divide the list and do slicing
-    #in this case, i use 4, you can change the default number to any digit
+    #in this case, i equals to 4, you can change the default number to any digit
     #bear in mind that this variable keeps the size of each sublist reasonable
     #we keep b divided by 4 until it reaches zero
     a=4
