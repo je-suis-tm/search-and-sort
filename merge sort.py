@@ -95,9 +95,10 @@ def merge_sort(target):
             k+=1
         
         return target
-        
 
- for i in range(100):
+    
+   
+for i in range(100):
     
     target=rd.sample([i for i in range(1000)],100)
 
