@@ -98,7 +98,7 @@ def quick_sort(target):
             #case 1
             if target[left]>pivot and target[right]<pivot:
                 target[left],target[right]=target[right],target[left]
-                l-=1
+                left-=1
                 
             #case 3
             if target[left]<pivot and target[right]<pivot:
