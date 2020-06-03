@@ -154,3 +154,16 @@ end
 #plz click the link below
 # http://interactivepython.org/runestone/static/pythonds/SortSearch/TheQuickSort.html
 
+
+# In[4]:
+
+
+for _ in 1:100
+    
+    test_arr=rand(1000)
+
+    if !(merge_sort(test_arr)==sort(test_arr))
+        printstyled("Erreur",color=:red)
+    end
+
+end
