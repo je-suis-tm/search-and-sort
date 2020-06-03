@@ -59,7 +59,7 @@ def shell_sort(target):
             for j in range(len(temp)):
                 target[i+j*b]=temp[j]
         
-         b=b//a
+        b=b//a
          
     return insertion_sort(target)
 
