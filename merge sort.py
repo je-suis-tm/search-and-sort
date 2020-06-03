@@ -5,6 +5,8 @@ Created on Mon Apr 16 11:13:17 2018
 
 """
 
+import random as rd
+
 #merge sort is so called advanced sort
 #its like a binary search in a way
 #we keep dividing the list into two parts
