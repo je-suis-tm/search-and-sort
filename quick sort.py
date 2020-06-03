@@ -4,6 +4,7 @@ Created on Tue Apr 17 15:32:34 2018
 
 @author: Administrator
 """
+import random as rd
 
 #okay. the epic one!
 #quick sort, mmm, not so quick
@@ -20,7 +21,7 @@ Created on Tue Apr 17 15:32:34 2018
 #we have a left index and a right index
 #we do traversal on both indices
 #say the left index comes from the left part
-#the right index comes from the right paart
+#the right index comes from the right part
 #we compare two elements with pivot number at the same time
 #there are four cases assuming that we dont have any duplicate values in the list
 #first case, left is larger than pivot, right is smaller than pivot
