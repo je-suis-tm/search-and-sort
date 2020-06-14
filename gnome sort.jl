@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 #gnome sort is another variation from bubble sort
@@ -13,7 +13,7 @@
 #the concept is kinda like depth first search in graph theory
 
 
-# In[ ]:
+# In[2]:
 
 
 function gnome_sort(arr)
@@ -46,7 +46,7 @@ function gnome_sort(arr)
 end
 
 
-# In[ ]:
+# In[3]:
 
 
 for _ in 1:100
