@@ -26,10 +26,14 @@ import random as rd
 #we would do it recursively in this script
 #otherwise we would have to use loops in loops
 
+#in this version we use min heap
+#if u intend to use max heap,check out geeks for geeks
+# https://www.geeksforgeeks.org/heap-sort/
+
 def heap_sort(target):
     
-    #denote i as the height of the tree
-    i=0
+    #denote layer as the height of the tree
+    layer=0
     maxlen=len(target)
     
     #when we are left with one element
@@ -38,22 +42,27 @@ def heap_sort(target):
         return target
     
     #this part is to find out how many layers we got for binary heap
-    #note that i starts from 0
-    while maxlen>2**i:
-        maxlen-=2**i
-        i+=1
+    #note that layer starts from 0
+    while maxlen>2**layer:
+        maxlen-=2**layer
+        layer+=1
         
-    #as i starts from zero
-    #we have to use i+1 to make sure each layer has been traveled
+    #as layer starts from zero
+    #we have to use layer to make sure each layer has been traveled
     #until we reach the base case, layer 0, the root
-    for j in range(i+1,-1,-1):
+    for i in range(layer,-1,-1):
         
         #a special property of binary heap
-        #the index of right child is always even number
-        #and for the left child, always odd number
+        #the beginning of each layer equals to 2**i-1
+        #each layer contains 2**i elements
+        for j in range(2**i-1,2**(i+1)-1):
+            
+            #a special property of binary heap as well
+            #the index of right child is always even number
+            #and for the left child, always odd number
             right=j*2+2
             left=j*2+1
-            
+
             #we use try function in case the node is the leaf
             #and if there is no left child
             #there wont be right child
@@ -63,23 +72,23 @@ def heap_sort(target):
             try:
                 if target[left]<target[j]:
                     target[left],target[j]=target[j],target[left]
-                
+
                 try:
                     if target[right]<target[j]:
                         target[right],target[j]=target[j],target[right]
-                      
+
                     if target[right]<target[left]:
                         target[right],target[left]=target[left],target[right]
-                        
-                except Exception:
+
+                except IndexError:
                     pass
-                
-            except Exception:
+
+            except IndexError:
                 pass
     
     #recursively, we shrink the size of the list
     #by removing its root which is the smallest element for the current tree
-    target[1:]=heap(target[1:])      
+    target[1:]=heap_sort(target[1:])      
     
     return target
 
