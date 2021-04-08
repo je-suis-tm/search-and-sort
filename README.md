@@ -12,6 +12,8 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 3. Hash Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/hash%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/hash%20search.py>Python</a>)
 
+4. Rabin-Karp Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/rabin%20karp%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/rabin%20karp%20search.py>Python</a>)
+
 
 ### Sort
 
