@@ -14,7 +14,7 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 4. Rabin-Karp Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/rabin%20karp%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/rabin%20karp%20search.py>Python</a>)
 
-5. Bloom Filter Search (Julia/<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bloom%20filter.py>Python</a>)
+5. Bloom Filter Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bloom%20filter.jl>Julia</a>/<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bloom%20filter.py>Python</a>)
 
 
 ### Sort
