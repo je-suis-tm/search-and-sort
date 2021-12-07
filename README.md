@@ -10,11 +10,11 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 2. Binary Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/sequential%20and%20binary%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/sequential%20and%20binary%20search.py>Python</a>)
 
-3. Hash Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/hash%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/hash%20search.py>Python</a>)
+3. Hash Search with Hash Chaining, Linear Probing & Quadratic Probing (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/hash%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/hash%20search.py>Python</a>)
 
 4. Rabin-Karp Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/rabin%20karp%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/rabin%20karp%20search.py>Python</a>)
 
-5. Bloom Filter Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bloom%20filter.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bloom%20filter.py>Python</a>)
+5. Bloom Filter Search with Fowler–Noll–Vo-1 Hash & Jenkins One-at-a-time Hash (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bloom%20filter.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bloom%20filter.py>Python</a>)
 
 
 ### Sort
