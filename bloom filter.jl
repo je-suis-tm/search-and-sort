@@ -5,6 +5,17 @@
 # In[1]:
 
 
+#bloom filter is a space-efficient probabilistic data structure
+#it is commonly used for query in large dataset
+#the query can possibly return false positive matches but never false negative matches
+#the workflow is very straight forward
+#for each string in the database, it has to go through k number of hash functions
+#k hash value would be allocated to the hashtable accordingly
+#to make any query,the query string has to go through k number of hash functions as well
+#if every underlying cell has been occupied in the hashtable
+#the query returns positive matches
+
+
 #fowler–noll–vo hash function
 #pseudo code can be found in the link below
 # https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function#FNV-1_hash    
