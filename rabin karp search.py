@@ -98,11 +98,15 @@ def naive_search(pattern,rawtext):
             if rawtext[i+j]!=pattern[j]:
                 ignore=True
             j+=1
+            
             if j==len_pattern:
+                if not ignore:
+                    output.append(i)
                 ignore=True
-                output.append(i)
+                
                 
     return output
+
 
 
 # In[5]:
