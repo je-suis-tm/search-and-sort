@@ -16,7 +16,7 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 5. Bloom Filter Search with Fowler–Noll–Vo-1 Hash & Jenkins One-at-a-time Hash (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bloom%20filter.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bloom%20filter.py>Python</a>)
 
-6. Knuth-Morris-Pratt Search (Julia, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/knuth%20morris%20pratt%20search.py>Python</a>)
+6. Knuth-Morris-Pratt Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/knuth%20morris%20pratt%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/knuth%20morris%20pratt%20search.py>Python</a>)
 
 
 ### Sort
