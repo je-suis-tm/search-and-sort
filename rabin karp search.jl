@@ -61,13 +61,17 @@ function naive_search(pattern,rawtext)
             end
             j+=1
             if j>len_pattern
+                if !ignore
+                    push!(output,i)
+                end
                 ignore=true
-                push!(output,i)
+                
             end
         end
     end                
     return output    
 end
+
 
 #instead of checking rawtext[i:i+len_pattern-1]==pattern
 #rabin karp algorithm leverages hash function
