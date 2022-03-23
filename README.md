@@ -20,6 +20,8 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 7. Boyer–Moore Search
 
+8. Aho–Corasick Search
+
 ### Sort
 
 1. Bubble Sort (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/bubble%2C%20selection%20and%20insertion%20sort.py>Python</a>)
