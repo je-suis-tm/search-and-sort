@@ -15,6 +15,8 @@
 #an efficient way is to skip "ô" and start the new iteration at "te d'azur"
 #thats the spirit of kmp
 #it seeks pattern inside the pattern to avoid duplicate effort in the raw text
+#check the link below for more details
+# http://www-igm.univ-mlv.fr/~lecroq/string/node8.html#SECTION0080
 
 
 # In[2]:
@@ -89,7 +91,7 @@ def get_lps(pattern):
 
 
 #actually kmp is not very different from naïve search
-def kmp(pattern,rawtext):
+def knuth_morris_pratt(pattern,rawtext):
     
     #get lps
     lps=get_lps(pattern)
@@ -128,7 +130,7 @@ pattern='Украї'
 # In[6]:
 
 
-print(naive_search(pattern,rawtext)==kmp(pattern,rawtext))
+print(naive_search(pattern,rawtext)==knuth_morris_pratt(pattern,rawtext))
 
 
 # In[7]:
@@ -143,5 +145,5 @@ get_ipython().run_line_magic('timeit', 'naive_search(pattern,rawtext)')
 
 #592 µs ± 1.34 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 #as usual,naïve search by me is always faster than improvements...
-get_ipython().run_line_magic('timeit', 'kmp(pattern,rawtext)')
+get_ipython().run_line_magic('timeit', 'knuth_morris_pratt(pattern,rawtext)')
 
