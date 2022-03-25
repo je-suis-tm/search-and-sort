@@ -1,8 +1,12 @@
+#!/usr/bin/env julia
+# coding: utf-8
 
 #rabin karp is a string search algorithm
 #it is useful for string pattern matching
 #particularly in plagiarism detection
 #this algorithm leverages hash function instead of direct substring matching
+#more details can be found in the link below
+# http://www-igm.univ-mlv.fr/~lecroq/string/node5.html#SECTION0050
 #in theory. a wise choice of hash function
 #can make its execution hypersonic compared to naïve search
 #more details of hash function can be found in the link below
