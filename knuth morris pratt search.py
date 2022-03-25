@@ -16,7 +16,7 @@
 #thats the spirit of kmp
 #it seeks pattern inside the pattern to avoid duplicate effort in the raw text
 #check the link below for more details
-# http://www-igm.univ-mlv.fr/~lecroq/string/node8.html#SECTION0080
+# https://www.inf.hs-flensburg.de/lang/algorithmen/pattern/kmpen.htm
 
 
 # In[2]:
