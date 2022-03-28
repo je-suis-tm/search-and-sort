@@ -130,7 +130,7 @@ function knuth_morris_pratt(pattern,rawtext)
         #we leverage lps to skip unnecessary inner loops
         if stop
             push!(output,i)
-            i+=len_pattern
+            i+=1
         else
             i=i+lps[j]+1            
         end
