@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
 # In[1]:
@@ -68,58 +68,42 @@ def get_hbc(pattern):
 #the concept of good suffix is very similar to lps in kmp algo
 #the only difference is bm algo starts from the right side of the pattern
 #u can check kmp for reference
-# https://github.com/je-suis-tm/search-and-sort/blob/master/knuth%20morris%20pratt%20search.py
+# https//github.com/je-suis-tm/search-and-sort/blob/master/knuth%20morris%20pratt%20search.jl
 def get_hgs(pattern):
-    
+        
     #initialize
     heuristics_gs=[0]*len(pattern)
     
     #iterate
-    for i in range(len(pattern)-1):
+    for i in range(len(pattern)-2,-1,-1):
         stop=False
-        left=0
-        right=1
-        counter=0
-        while not stop:
+        left=i
+        right=i+1
+        while not stop:           
             
             #compute the longest proper prefix
-            if pattern[left]==pattern[i+right]:
-                left+=1
-                right+=1
-                counter+=1
+            if pattern[left:(left+len(pattern[right:]))]==pattern[right:]:
+                stop=True
+                break
             
             #if no match
+            #increment right side and keep trying
             else:
-                
-                #no suffix exists
-                #increment right side and keep trying
-                if counter==0:
-                    right+=1                    
-                    
-                #longest proper suffix has been matched
-                else:
-                    stop=True  
+                right+=1
             
-            if i+right==len(pattern):
-                
-                #longest proper suffix has been matched
-                if counter!=0:
-                    heuristics_gs[i]=i+right-1-(left-1)
-                    stop=True
-                    continue
-                
-                #avoid index error
-                right=1
-                left+=1
+            #if right side has reached its limit
+            #try left side
+            if right==len(pattern):
+                left-=1
+                right=i+1
                 
             #avoid index error
-            if left>i:
+            if left==-1:
                 stop=True
-            
-            #update good suffix
-            if stop:                
-                if counter!=0:  
-                    heuristics_gs[i]=i+right-1-(left-1)
+                break
+        
+        #remember to revert the pointer back to the end of the pattern
+        heuristics_gs[i]=right-left+len(pattern)-i-1
     
     #the last one is always one
     heuristics_gs[-1]=1
@@ -149,6 +133,7 @@ def boyer_moore(pattern,rawtext):
         if pattern[j]!=rawtext[i]:
             if rawtext[i] in heuristics_bc[j]:
                 hbc=heuristics_bc[j][rawtext[i]]
+                hbc+=(len(pattern)-j-1)
             else:
                 hbc=len(pattern)
             hgs=heuristics_gs[j]
@@ -188,14 +173,20 @@ print(boyer_moore(pattern,rawtext)==naive_search(pattern,rawtext))
 # In[8]:
 
 
-# 213 µs ± 1.7 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+#325 µs ± 31.3 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 get_ipython().run_line_magic('timeit', 'naive_search(pattern,rawtext)')
 
 
 # In[9]:
 
 
-# 169 µs ± 1.62 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+#190 µs ± 13.9 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
 #bm is really faster than naïve!
 get_ipython().run_line_magic('timeit', 'boyer_moore(pattern,rawtext)')
+
+
+# In[ ]:
+
+
+
 
