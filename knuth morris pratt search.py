@@ -108,7 +108,7 @@ def knuth_morris_pratt(pattern,rawtext):
                 break
         if bingo:
             pos.append(i)
-            i+=len(pattern)
+            i+=1
         
         #until a mismatch
         #we leverage lps to skip unnecessary inner loops
