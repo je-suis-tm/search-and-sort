@@ -18,7 +18,7 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 6. Knuth-Morris-Pratt Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/knuth%20morris%20pratt%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/knuth%20morris%20pratt%20search.py>Python</a>)
 
-7. Boyer–Moore Search (Julia, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/boyer%20moore%20search.py>Python</a>)
+7. Boyer–Moore Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/boyer%20moore%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/boyer%20moore%20search.py>Python</a>)
 
 8. Aho–Corasick Search
 
