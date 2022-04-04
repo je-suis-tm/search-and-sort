@@ -20,7 +20,7 @@ This is a repository for algorithm learning. Hopefully it can help you along you
 
 7. Boyer–Moore Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/boyer%20moore%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/boyer%20moore%20search.py>Python</a>)
 
-8. Aho–Corasick Search
+8. Aho–Corasick Search (<a href=https://github.com/je-suis-tm/search-and-sort/blob/master/aho%20corasick%20search.jl>Julia</a>, <a href=https://github.com/je-suis-tm/search-and-sort/blob/master/aho%20corasick%20search.py>Python</a>)
 
 ### Sort
 
